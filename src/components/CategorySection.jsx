@@ -16,7 +16,9 @@ function CategorySection({ item, bgImg, title }) {
 			<div className='grid grid-cols-4 w-full'>
 				{item.map((el, index) => {
 					return (
-						<div className='py-[10px] pl-[10px] border border-[#DEE2E7] flex items-center justify-between w-full'>
+						<div
+							key={index}
+							className='py-[10px] pl-[10px] border border-[#DEE2E7] flex items-center justify-between w-full'>
 							<div className='flex flex-col gap-2'>
 								<h3 className='text-[#1C1C1C] text-[16px] '>
 									{el.title}

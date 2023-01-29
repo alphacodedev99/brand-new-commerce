@@ -5,6 +5,7 @@ import CategoryHolder from './CategoryHolder';
 import TopCategory from './TopCategory';
 import DailyCategory from './DailyCategory';
 import CategorySection from './CategorySection';
+import InfoSection from './InfoSection';
 
 export {
 	Navbar,
@@ -14,4 +15,5 @@ export {
 	TopCategory,
 	DailyCategory,
 	CategorySection,
+	InfoSection,
 };

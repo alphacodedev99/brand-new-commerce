@@ -3,6 +3,7 @@ import {
 	CategorySection,
 	DailyCategory,
 	TopCategory,
+	InfoSection,
 } from '../components';
 // fetch product here
 import { fetchCategory } from '../utils/fetchPerCategory';
@@ -35,6 +36,7 @@ function Home() {
 				bgImg={secondSectionBg}
 				title={'Consumer electronics and gadgets'}
 			/>
+			<InfoSection />
 		</div>
 	);
 }

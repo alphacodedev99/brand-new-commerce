@@ -11,8 +11,11 @@ import {
 	MenuItem,
 	Select,
 } from '@mui/material';
+import { useState } from 'react';
 
 function CategoryHolder() {
+	const [country, setCountry] = useState('');
+	const [ship, setShip] = useState('');
 	// send data to redux-toolkit
 	const dispatch = useDispatch();
 	// get item from redux
@@ -24,6 +27,15 @@ function CategoryHolder() {
 
 	// for category selection
 	let firstFiveCategories = category.slice(0, 5);
+
+	// take value from countrey
+	const handleChange = (event) => {
+		setCountry(event.target.value);
+	};
+
+	const handleShip = (event) => {
+		setShip(event.target.value);
+	};
 
 	return (
 		<div className='border-b border-[#DEE2E7] '>
@@ -55,10 +67,12 @@ function CategoryHolder() {
 							disableUnderline
 							labelId='demo-simple-select-label'
 							id='demo-simple-select'
-							label='Age'>
-							<MenuItem>Serbia, RSD</MenuItem>
-							<MenuItem>Croatia, Kruna</MenuItem>
-							<MenuItem>Bangld, Krn</MenuItem>
+							label='Age'
+							onChange={(event) => handleChange(event)}
+							value={country}>
+							<MenuItem value={'serbia'}>Serbia, RSD</MenuItem>
+							<MenuItem value={'croatia'}>Croatia, Kruna</MenuItem>
+							<MenuItem value={'bangdl'}> Bangld, Krn</MenuItem>
 						</Select>
 					</FormControl>
 					<FormControl variant='standard' className='w-[120px]'>
@@ -69,10 +83,12 @@ function CategoryHolder() {
 							disableUnderline
 							labelId='demo-simple-select-label'
 							id='demo-simple-select'
-							label='Age'>
-							<MenuItem>Serbia</MenuItem>
-							<MenuItem>Germany</MenuItem>
-							<MenuItem>Greece</MenuItem>
+							label='Age'
+							value={ship}
+							onChange={handleShip}>
+							<MenuItem value={'serbia'}>Serbia</MenuItem>
+							<MenuItem value={'germany'}>Germany</MenuItem>
+							<MenuItem value={'greece'}>Greece</MenuItem>
 						</Select>
 					</FormControl>
 				</div>
