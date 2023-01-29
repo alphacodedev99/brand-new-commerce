@@ -1,3 +1,4 @@
 import brandLogo from './brandLogo.svg';
+import avatar from './avatar.svg';
 
-export { brandLogo };
+export { brandLogo, avatar };

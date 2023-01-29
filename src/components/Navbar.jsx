@@ -22,7 +22,7 @@ function Navbar() {
 				<h1 className='text-[#8CB7F5] text-2xl font-bold'>Brand</h1>
 			</Link>
 			{/* search bar */}
-			<div className='flex h-[40px] items-center border-2 border-[#0D6EFD] rounded-xl '>
+			<div className='flex h-[40px] items-center border-2 border-[#1976d2] rounded-xl '>
 				<input
 					type='text'
 					placeholder='Search'
@@ -43,10 +43,15 @@ function Navbar() {
 							size='small'
 							color='primary'
 							{...params}
+							// here i remove underline on text field
+							InputProps={{
+								...params.InputProps,
+								disableUnderline: true,
+							}}
 						/>
 					)}
 				/>
-				<Button variant='contained' className=''>
+				<Button variant='contained' className='rounded-xl'>
 					Search
 				</Button>
 			</div>
