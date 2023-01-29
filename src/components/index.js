@@ -4,6 +4,7 @@ import Subscribe from './Subscribe';
 import CategoryHolder from './CategoryHolder';
 import TopCategory from './TopCategory';
 import DailyCategory from './DailyCategory';
+import CategorySection from './CategorySection';
 
 export {
 	Navbar,
@@ -12,4 +13,5 @@ export {
 	CategoryHolder,
 	TopCategory,
 	DailyCategory,
+	CategorySection,
 };

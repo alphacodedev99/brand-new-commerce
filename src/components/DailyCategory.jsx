@@ -31,10 +31,6 @@ function DailyCategory() {
 		.sort(() => 0.5 - Math.random())
 		.slice(0, 5);
 
-	console.log('====================================');
-	console.log(random);
-	console.log('====================================');
-
 	return (
 		<div className='mt-[35px] w-full h-full border border-[#DEE2E7] rounded-lg flex '>
 			<div className='border-r border-[#DEE2E7] w-[280px]  pt-[20px] pl-[10px] '>
