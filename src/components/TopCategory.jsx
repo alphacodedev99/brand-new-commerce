@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { fetchCategory } from '../utils/fetchPerCategory';
 // images
 import { avatar } from '../assets';
+import Button from './Button';
 function TopCategory() {
 	// default first category
 	const [currentCategory, setCurrentCategory] =
@@ -22,7 +23,7 @@ function TopCategory() {
 
 	return (
 		<div className='w-full  h-[420px] border-2 border-[#DEE2E7] mt-[20px] rounded-lg  px-[10px] flex items-center gap-5 py-[10px]'>
-			<div className='h-full flex flex-col '>
+			<div className='flex flex-col h-full '>
 				{topCategory.map((cat, index) => {
 					return (
 						<p
@@ -66,9 +67,7 @@ function TopCategory() {
 							Hi, user <br /> let's get stated
 						</p>
 					</div>
-					<button className='rounded-lg mt-[10px] bg-gradient-to-t to-[#127FFF] from-[#0067FF] text-[#fff] py-[3px]'>
-						Join now
-					</button>
+					<Button title='Join now' />
 					<button className='rounded-lg mt-[10px] bg-[#fff] text-[#0067FF] py-[3px]'>
 						Log in
 					</button>

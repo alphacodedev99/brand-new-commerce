@@ -6,6 +6,7 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import { buildingBg } from '../assets';
+import Button from './Button';
 function InfoSection() {
 	const [psc, setPsc] = useState('');
 
@@ -27,37 +28,52 @@ function InfoSection() {
 					<h3 className='text-[#fff] text-[32px] font-[600] '>
 						An easy way to send <br /> requests to all suppliers
 					</h3>
-					<p className='text-[#fff] text-[16px] font-[400] '>
-						Lorem ipsum dolor sit amet, consectetur adipisicing <br />{' '}
+					<p className='text-[#fff] text-[16px] font-[400]'>
+						Lorem ipsum dolor sit amet, consectetur adipisicing <br />
 						elit, sed do eiusmod tempor incididunt.
 					</p>
 				</div>
 				<div className='bg-[#fff] p-[10px] rounded-lg'>
-					<form className='flex flex-col '>
-						<h3>Send quote to suppliers</h3>
-						<input type='text' placeholder='What item you need?' />
-						<textarea name='detail' cols='30' rows='10'></textarea>
-						<div>
-							<input type='text' placeholder='Quantity' />
-							<FormControl variant='standard' className='w-[120px] '>
-								<InputLabel id='demo-simple-select-label'>
+					<form className='flex flex-col gap-4'>
+						<h3 className='text-[20px] font-[600] my-[10px]'>
+							Send quote to suppliers
+						</h3>
+						<input
+							type='text'
+							placeholder='What item you need?'
+							className='border border-[#ddd] px-[10px] py-[10px] rounded-lg'
+						/>
+						<textarea
+							placeholder='Type more details'
+							name='detail'
+							className='border border-[#ddd] px-[10px] py-[10px] rounded-lg'></textarea>
+						<div className='flex items-center gap-2'>
+							<input
+								type='text'
+								placeholder='Quantity'
+								className='border border-[#ddd] px-[10px] py-[12px] rounded-lg'
+							/>
+							<FormControl sx={{ minWidth: 120 }} size='small'>
+								<InputLabel
+									id='demo-simple-select-helper-label'
+									className='mt-[5px]'>
 									Psc
 								</InputLabel>
 								<Select
-									disableUnderline
-									labelId='demo-simple-select-label'
-									id='demo-simple-select'
+									className=' px-[10px] py-[5px] rounded-lg '
+									labelId='demo-simple-select-helper-label'
+									id='demo-simple-select-helper'
+									value={psc}
 									label='Age'
-									onChange={(event) => handleChange(event)}
-									value={psc}>
+									onChange={handleChange}>
 									<MenuItem value={10}>Ten</MenuItem>
 									<MenuItem value={20}>Twenty</MenuItem>
 									<MenuItem value={30}>Thirty</MenuItem>
 								</Select>
 							</FormControl>
 						</div>
-						<button>Send inquiry</button>
 					</form>
+					<Button title='Send inquiry' />
 				</div>
 			</div>
 		</div>
