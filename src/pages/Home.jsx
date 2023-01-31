@@ -4,6 +4,7 @@ import {
 	DailyCategory,
 	TopCategory,
 	InfoSection,
+	Recommend,
 } from '../components';
 // fetch product here
 import { fetchCategory } from '../utils/fetchPerCategory';
@@ -37,6 +38,7 @@ function Home() {
 				title={'Consumer electronics and gadgets'}
 			/>
 			<InfoSection />
+			<Recommend />
 		</div>
 	);
 }

@@ -7,6 +7,8 @@ import DailyCategory from './DailyCategory';
 import CategorySection from './CategorySection';
 import InfoSection from './InfoSection';
 import Button from './Button';
+import Recommend from './Recommend';
+import RecommendCard from './RecommendCard';
 
 export {
 	Navbar,
@@ -18,4 +20,6 @@ export {
 	CategorySection,
 	InfoSection,
 	Button,
+	Recommend,
+	RecommendCard,
 };
