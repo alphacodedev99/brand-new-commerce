@@ -14,16 +14,13 @@ function InfoSection() {
 		setPsc(event.target.value);
 	};
 	return (
-		<div
-			className='h-[420px] mb-[20px] bg-gradient-to-r from-[#2C7CF1] to-[#00d0ff97] relative rounded-lg  '
-			// style={{ backgroundImage: `url(${buildingBg})` }}
-		>
+		<div className='h-[420px] mb-[20px] bg-gradient-to-r from-[#2C7CF1] to-[#00d0ff97] relative rounded-lg '>
 			<img
 				src={buildingBg}
 				alt=''
 				className='z-0 w-full h-full opacity-40'
 			/>
-			<div className=' p-[20px] absolute top-0 bottom-0 left-0 right-0 flex justify-between'>
+			<div className=' p-[20px] absolute top-0 bottom-0 left-0 right-0 flex flex-col md:flex-row justify-between'>
 				<div>
 					<h3 className='text-[#fff] text-[32px] font-[600] '>
 						An easy way to send <br /> requests to all suppliers
