@@ -1,0 +1,49 @@
+.extra-services {
+    padding: 50px 0;
+
+    h2 {
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    .extra-services-container {
+        display: flex;
+        justify-content: space-between;
+
+        .extra-services-box {
+            width: 23%;
+            background-color: white;
+            border: 1px solid rgb(200, 200, 200);
+            border-radius: 10px;
+            position: relative;
+            img{
+                border-radius: 10px;
+                width: 100%;
+              
+               
+
+            }
+            svg{
+                background-color: rgb(235, 240, 242);
+                border-radius: 100px;
+                border: 1px solid white;
+                columns: white;
+                padding: 10px;
+                font-size: 40px;
+                position: absolute;
+                right: 5%;
+                transform: translateY(-50%);
+                
+                
+              
+               
+               
+            }
+
+            h4 {
+                padding: 20px;
+            }
+        }
+    }
+}

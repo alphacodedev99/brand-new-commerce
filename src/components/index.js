@@ -9,7 +9,7 @@ import InfoSection from './InfoSection';
 import Button from './Button';
 import Recommend from './Recommend';
 import RecommendCard from './RecommendCard';
-import Services from './Services';
+import ExtraServices from './ExtraServices';
 
 export {
 	Navbar,
@@ -23,5 +23,5 @@ export {
 	Button,
 	Recommend,
 	RecommendCard,
-	Services,
+	ExtraServices,
 };

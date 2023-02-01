@@ -2,7 +2,7 @@ import React from 'react';
 
 function RecommendCard({ item }) {
 	return (
-		<div className='border border-[#E0E0E0] flex flex-col   p-2 rounded-xl'>
+		<div className='border border-[#E0E0E0] flex flex-col   p-2 rounded-xl bg-white'>
 			<img
 				src={item.thumbnail}
 				alt={item.title}
