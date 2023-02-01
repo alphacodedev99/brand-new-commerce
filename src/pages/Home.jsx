@@ -5,6 +5,7 @@ import {
 	TopCategory,
 	InfoSection,
 	Recommend,
+	Services,
 } from '../components';
 // fetch product here
 import { fetchCategory } from '../utils/fetchPerCategory';
@@ -39,6 +40,7 @@ function Home() {
 			/>
 			<InfoSection />
 			<Recommend />
+			<Services />
 		</div>
 	);
 }
