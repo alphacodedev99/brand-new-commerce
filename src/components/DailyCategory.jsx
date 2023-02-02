@@ -42,7 +42,7 @@ function DailyCategory() {
 				</p>
 				<Countdown date={Date.now() + 31235000} renderer={renderer} />
 			</div>
-			<div className='grid items-center flex-1 w-full h-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
+			<div className='grid items-center w-full h-full grid-cols-2 lg:flex-1 md:grid-cols-3 lg:grid-cols-5'>
 				{random.map((item, index) => {
 					return (
 						<div
