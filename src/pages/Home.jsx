@@ -6,6 +6,8 @@ import {
   InfoSection,
   Recommend,
   ExtraServices,
+  SuppliersByRegion,
+  Subscribe
 } from "../components";
 
 // fetch product here
@@ -40,6 +42,8 @@ function Home() {
       <InfoSection />
       <Recommend />
       <ExtraServices />
+      <SuppliersByRegion />
+      <Subscribe/>
     </div>
   );
 }

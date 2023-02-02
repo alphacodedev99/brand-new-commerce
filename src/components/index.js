@@ -10,6 +10,7 @@ import Button from './Button';
 import Recommend from './Recommend';
 import RecommendCard from './RecommendCard';
 import ExtraServices from './ExtraServices';
+import SuppliersByRegion from './SuppliersByRegion';
 
 export {
 	Navbar,
@@ -24,4 +25,5 @@ export {
 	Recommend,
 	RecommendCard,
 	ExtraServices,
+	SuppliersByRegion
 };

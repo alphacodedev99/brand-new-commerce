@@ -1,0 +1,28 @@
+.suppliers-by-region{
+    h2{
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    .region-container{
+        padding: 50px 0;
+   
+        .region{
+            img{
+                width: 70px;
+                margin-right: 10px;
+            }
+            width: 25%;
+            float: left;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            h2, p{
+                margin: 0;
+                padding: 0;
+            }
+           
+        }
+        
+    }
+}
