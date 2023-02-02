@@ -12,6 +12,7 @@ import RecommendCard from './RecommendCard';
 import ExtraServices from './ExtraServices';
 import SuppliersByRegion from './SuppliersByRegion';
 
+
 export {
 	Navbar,
 	Footer,
@@ -25,5 +26,6 @@ export {
 	Recommend,
 	RecommendCard,
 	ExtraServices,
-	SuppliersByRegion
+	SuppliersByRegion,
+
 };

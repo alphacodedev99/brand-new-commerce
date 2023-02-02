@@ -18,7 +18,7 @@ function SuppliersByRegion() {
         <div className="region">
           <img src={ArabicEmirates} alt="Arabic Emiragtes Flag" />
           <div className="region-details">
-            <h2>Arabic Emirates</h2>
+            <h2>Emirates</h2>
             <p>shopname.ae</p>
           </div>
         </div>
