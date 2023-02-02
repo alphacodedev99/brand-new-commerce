@@ -17,14 +17,13 @@
             border: 1px solid rgb(200, 200, 200);
             border-radius: 10px;
             position: relative;
-            img{
-                border-radius: 10px;
-                width: 100%;
-              
-               
 
+            img {
+                border-radius: 10px 10px 0 0;
+                width: 100%;
             }
-            svg{
+
+            svg {
                 background-color: rgb(235, 240, 242);
                 border-radius: 100px;
                 border: 1px solid white;
@@ -34,16 +33,42 @@
                 position: absolute;
                 right: 5%;
                 transform: translateY(-50%);
-                
-                
-              
-               
-               
             }
 
             h4 {
                 padding: 20px;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    // example
+    .extra-services-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        gap: 20px;
+
+    }
+    .extra-services-box{
+        width: 100% !important;
+       
+    }
+}
+@media only screen and (max-width: 700px) {
+
+    // example
+    .extra-services-container {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+
+    }
+    .extra-services-box{
+        width: 100% !important;
+       
     }
 }
