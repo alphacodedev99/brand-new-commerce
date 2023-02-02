@@ -2,9 +2,9 @@ import React from 'react';
 
 function CategorySection({ item, bgImg, title }) {
 	return (
-		<div className='flex my-[20px] border border-[#DEE2E7] rounded-lg'>
+		<div className='flex flex-wrap lg:flex-nowrap justify-center lg:justify-start my-[20px] border border-[#DEE2E7] rounded-lg bg-white'>
 			<div
-				className='p-[10px] bg-center bg-cover w-[250px]'
+				className='p-[10px] bg-center bg-cover w-[400px]  lg:w-[250px] '
 				style={{ backgroundImage: `url(${bgImg})` }}>
 				<h3 className='text-[#1C1C1C] text-[20px] font-semibold'>
 					{title}
@@ -13,7 +13,7 @@ function CategorySection({ item, bgImg, title }) {
 					Source Now
 				</button>
 			</div>
-			<div className='grid grid-cols-4 w-full'>
+			<div className='grid w-full grid-cols-2 lg:grid-cols-4'>
 				{item.map((el, index) => {
 					return (
 						<div

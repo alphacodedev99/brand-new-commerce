@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 
-
 // Component on all pages
 import {
 	Navbar,
@@ -23,14 +22,14 @@ function App() {
 	}, []);
 
 	return (
-		<div className='container mx-auto'>
+		<div>
 			<Navbar />
 			<CategoryHolder />
-			<Outlet />
-
-			{/* TODO: For now is hidden */}
-			{/* <Subscribe />
-			<Footer /> */}
+			<div className='container mx-auto'>
+				<Outlet />
+			</div>
+			<Subscribe />
+			<Footer />
 		</div>
 	);
 }

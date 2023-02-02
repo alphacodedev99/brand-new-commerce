@@ -32,8 +32,8 @@ function DailyCategory() {
 		.slice(0, 5);
 
 	return (
-		<div className='mt-[35px] w-full h-full border border-[#DEE2E7] rounded-lg flex '>
-			<div className='border-r border-[#DEE2E7] w-[280px]  pt-[20px] pl-[10px] '>
+		<div className='flex flex-wrap lg:flex-nowrap justify-center  lg:justify-start mt-[35px] w-full h-full border border-[#DEE2E7] rounded-lg  bg-white'>
+			<div className='lg:border-r lg:border-[#DEE2E7] lg:w-[280px]  pt-[20px] pl-[10px] '>
 				<h3 className='text-[#1C1C1C] font-[600] text-[20px]'>
 					Deals and offers
 				</h3>
@@ -42,12 +42,12 @@ function DailyCategory() {
 				</p>
 				<Countdown date={Date.now() + 31235000} renderer={renderer} />
 			</div>
-			<div className='grid grid-cols-5 items-center h-full w-full'>
+			<div className='grid items-center w-full h-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
 				{random.map((item, index) => {
 					return (
 						<div
 							key={item.id}
-							className='border-r last:border-none border-[#DEE2E7] flex flex-col items-center justify-start h-full w-full py-[10px]'>
+							className=' last:border-none lg:border-r lg:border-[#DEE2E7] flex flex-col items-center justify-start h-full w-full py-[10px]'>
 							<img
 								src={item.thumbnail}
 								alt='img'

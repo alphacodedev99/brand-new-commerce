@@ -38,16 +38,17 @@ function CategoryHolder() {
 	};
 
 	return (
-		<div className='border-b border-[#DEE2E7] '>
-			<div className='flex items-center justify-between gap-2 w-full '>
-				<div className='flex items-center'>
+		<div className='border-b border-[#DEE2E7] bg-white'>
+			<div className='container flex items-center justify-between gap-2 mx-auto'>
+				{/* categories */}
+				<div className='flex flex-wrap items-center justify-center w-full lg:justify-start'>
 					<MenuIcon
 						className='mr-1 cursor-pointer'
 						fontSize='large'
 					/>
 					<p className='mr-5'>All category</p>
 
-					<div className='flex gap-[26px]  '>
+					<div className='flex items-center justify-center lg:justify-start flex-wrap  gap-[26px] mt-[20px] sm:mt-0 '>
 						{firstFiveCategories.map((item, index) => {
 							return (
 								<p key={index} className=''>
@@ -57,8 +58,8 @@ function CategoryHolder() {
 						})}
 					</div>
 				</div>
-
-				<div className='flex gap-10'>
+				{/* slect country and value */}
+				<div className='hidden gap-10 lg:flex'>
 					<FormControl variant='standard' className='w-[120px] '>
 						<InputLabel id='demo-simple-select-label'>
 							Country,Value

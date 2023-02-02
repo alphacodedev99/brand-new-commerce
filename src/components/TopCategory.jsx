@@ -22,8 +22,8 @@ function TopCategory() {
 	}, [currentCategory]);
 
 	return (
-		<div className='w-full  h-[420px] border-2 border-[#DEE2E7] mt-[20px] rounded-lg  px-[10px] flex items-center gap-5 py-[10px]'>
-			<div className='flex flex-col h-full '>
+		<div className='w-full bg-white  h-full  lg:h-[420px] border-2 border-[#DEE2E7] mt-[20px] rounded-lg  px-[10px] flex flex-col lg:flex-row items-center gap-5 py-[10px]'>
+			<div className='flex flex-wrap justify-center h-full lg:justify-start lg:flex-nowrap lg:flex-col '>
 				{topCategory.map((cat, index) => {
 					return (
 						<p
@@ -40,7 +40,7 @@ function TopCategory() {
 				})}
 			</div>
 			{/* middle section of photo and description */}
-			<div className='relative grow'>
+			<div className='relative w-full lg:w-auto grow'>
 				<img
 					src={currentViewCategory[0]?.thumbnail}
 					alt=''
@@ -59,8 +59,8 @@ function TopCategory() {
 				</div>
 			</div>
 			{/* right section */}
-			<div className='flex flex-col gap-5 py-[10px]'>
-				<div className='bg-[#E3F0FF] w-[200px] h-[150px] rounded-lg  py-[10px] px-[10px] flex flex-col'>
+			<div className='flex flex-col items-center md:flex-row lg:flex-col md:items-center md:justify-center  gap-5 py-[10px]'>
+				<div className='bg-[#E3F0FF] w-[80vw] h-full md:w-[200px]  md:h-[150px] rounded-lg  py-[10px] px-[10px] flex flex-col'>
 					<div className='flex gap-2'>
 						<img src={avatar} alt='' />
 						<p className='text-[#1C1C1C]'>
@@ -72,13 +72,13 @@ function TopCategory() {
 						Log in
 					</button>
 				</div>
-				<div className='bg-[#F38332] w-[200px] h-[95px] rounded-lg'>
-					<p className='text-[#fff] pt-[16px] pl-[16px]'>
+				<div className='bg-[#F38332] w-[80vw] h-full md:w-[200px] md:h-[95px] rounded-lg'>
+					<p className='text-[#fff] p-[15px] md:pt-[16px] md:pl-[16px]'>
 						Get US $10 off with a new supplier
 					</p>
 				</div>
-				<div className='bg-[#55BDC3] w-[200px] h-[95px] rounded-lg'>
-					<p className='text-[#fff] pt-[16px] pl-[16px]'>
+				<div className='bg-[#55BDC3] w-[80vw] h-full md:w-[200px] md:h-[95px] rounded-lg'>
+					<p className='text-[#fff] p-[15px] md:pt-[16px] md:pl-[16px]'>
 						Send quotes with supplier preferences
 					</p>
 				</div>

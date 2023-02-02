@@ -14,7 +14,7 @@ function InfoSection() {
 		setPsc(event.target.value);
 	};
 	return (
-		<div className='h-[420px] mb-[20px] bg-gradient-to-r from-[#2C7CF1] to-[#00d0ff97] relative rounded-lg '>
+		<div className='h-[600px] md:h-[420px] mb-[20px] bg-gradient-to-r from-[#2C7CF1] to-[#00d0ff97] relative rounded-lg '>
 			<img
 				src={buildingBg}
 				alt=''
@@ -44,7 +44,7 @@ function InfoSection() {
 							placeholder='Type more details'
 							name='detail'
 							className='border border-[#ddd] px-[10px] py-[10px] rounded-lg'></textarea>
-						<div className='flex items-center gap-2'>
+						<div className='flex flex-wrap items-center gap-2 md:flex-nowrap'>
 							<input
 								type='text'
 								placeholder='Quantity'

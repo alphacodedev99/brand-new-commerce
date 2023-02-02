@@ -1,53 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import {
-  CategorySection,
-  DailyCategory,
-  TopCategory,
-  InfoSection,
-  Recommend,
-  ExtraServices,
-  SuppliersByRegion,
-  Subscribe,
-  Footer
-} from "../components";
+	CategorySection,
+	DailyCategory,
+	TopCategory,
+	InfoSection,
+	Recommend,
+	ExtraServices,
+	SuppliersByRegion,
+} from '../components';
 
 // fetch product here
-import { fetchCategory } from "../utils/fetchPerCategory";
+import { fetchCategory } from '../utils/fetchPerCategory';
 // images
-import { firstSectionBg, secondSectionBg } from "../assets";
+import { firstSectionBg, secondSectionBg } from '../assets';
 
 function Home() {
-  const [firstSection, setFirstSection] = useState([]);
-  const [secondSection, setSecondSection] = useState([]);
-  useEffect(() => {
-    fetchCategory("laptops").then((data) => setFirstSection(data.products));
-    fetchCategory("smartphones").then((data) =>
-      setSecondSection(data.products)
-    );
-  }, []);
+	const [firstSection, setFirstSection] = useState([]);
+	const [secondSection, setSecondSection] = useState([]);
+	useEffect(() => {
+		fetchCategory('laptops').then((data) =>
+			setFirstSection(data.products)
+		);
+		fetchCategory('smartphones').then((data) =>
+			setSecondSection(data.products)
+		);
+	}, []);
 
-  return (
-    <div>
-      <TopCategory />
-      <DailyCategory />
-      <CategorySection
-        item={firstSection}
-        bgImg={firstSectionBg}
-        title={"Home and outdoor"}
-      />
-      <CategorySection
-        item={secondSection}
-        bgImg={secondSectionBg}
-        title={"Consumer electronics and gadgets"}
-      />
-      <InfoSection />
-      <Recommend />
-      <ExtraServices />
-      <SuppliersByRegion />
-      <Subscribe />
-      <Footer/>
-    </div>
-  );
+	return (
+		<div>
+			<TopCategory />
+			<DailyCategory />
+			<CategorySection
+				item={firstSection}
+				bgImg={firstSectionBg}
+				title={'Home and outdoor'}
+			/>
+			<CategorySection
+				item={secondSection}
+				bgImg={secondSectionBg}
+				title={'Consumer electronics and gadgets'}
+			/>
+			<InfoSection />
+			<Recommend />
+			<ExtraServices />
+			<SuppliersByRegion />
+		</div>
+	);
 }
 
 export default Home;

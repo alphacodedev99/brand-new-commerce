@@ -5,21 +5,30 @@
         font-size: 24px;
     }
     .region-container{
-       
-        
+       display: grid;
+    
+       grid-template-columns: repeat(5,1fr);
+
+       @media screen and (max-width: 1024px){
+        grid-template-columns: repeat(3,1fr);
+       }
+       @media screen and (max-width:460px){
+        grid-template-columns: repeat(2,1fr);
+       }
         .region{
             display: flex;
-            justify-content: center;
-         
-            img{
-                width: 70px;
-                margin-right: 10px;
-            }
-            width: 25%;
-            float: left;
+            width: 200px;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
+    
+            img{
+                width: 28px;
+                height: 20px;
+                margin-right: 10px;
+            }
+            
+            
             h2, p{
                 margin: 0;
                 padding: 0;

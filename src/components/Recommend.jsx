@@ -8,7 +8,7 @@ function Recommend() {
 	let recommendedItems = products.slice(0, 10);
 
 	return (
-		<div className='my-10'>
+		<div className='mx-5 my-10 md:mx-0'>
 			<h3 className='text-[#1C1C1C] text-[24px] font-[600]'>
 				Recommended items
 			</h3>
