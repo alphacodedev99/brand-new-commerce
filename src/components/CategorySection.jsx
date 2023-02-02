@@ -13,7 +13,7 @@ function CategorySection({ item, bgImg, title }) {
 					Source Now
 				</button>
 			</div>
-			<div className='grid w-full grid-cols-2 lg:grid-cols-4'>
+			<div className='grid flex-1 w-full grid-cols-2 lg:grid-cols-4'>
 				{item.map((el, index) => {
 					return (
 						<div
