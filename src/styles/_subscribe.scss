@@ -1,0 +1,61 @@
+.subscribe {
+    background-color: rgb(223, 238, 247);
+    height: 190px;
+    margin: 200px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        /* identical to box height, or 140% */
+
+        text-align: center;
+        letter-spacing: -0.2px;
+
+        /* base-color/dark */
+
+        color: #1C1C1C;
+    }
+
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 40px;
+        /* identical to box height, or 150% */
+
+        text-align: center;
+        letter-spacing: -0.2px;
+
+        /* base-color/gray-800 */
+
+        color: #606060;
+    }
+
+    input {
+        height: 20px;
+        margin-right: 10px;
+        padding: 26px;
+    }
+
+    button {
+        // height: 20px;
+        padding: 16px;
+        background: linear-gradient(180deg, #127FFF 0%, #0067FF 100%);
+        border-radius: 6px;
+        color: white;
+         font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+    }
+}
