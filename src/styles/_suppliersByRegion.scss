@@ -1,40 +1,59 @@
-.suppliers-by-region{
-    h2{
-        margin-bottom: 10px;
-        font-weight: 600;
-        font-size: 24px;
-    }
-    .region-container{
-       display: grid;
-    
-       grid-template-columns: repeat(5,1fr);
+.suppliers-by-region {
 
-       @media screen and (max-width: 1024px){
-        grid-template-columns: repeat(3,1fr);
-       }
-       @media screen and (max-width:460px){
-        grid-template-columns: repeat(2,1fr);
-       }
-        .region{
-            display: flex;
-            width: 200px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-    
-            img{
-                width: 28px;
-                height: 20px;
-                margin-right: 10px;
-            }
-            
-            
-            h2, p{
-                margin: 0;
-                padding: 0;
-            }
-           
-        }
-        
+  h2 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .region-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
     }
+
+    @media screen and (max-width: 460px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .region {
+      display: flex;
+    
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 28px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      h2,
+      p {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter";
+        font-style: normal;
+      }
+
+      h2 {
+        font-weight: 400;
+        font-size: 16px;
+
+        letter-spacing: -0.2px;
+
+        color: #1c1c1c;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 13px;
+
+        color: #8b96a5;
+      }
+    }
+  }
 }
