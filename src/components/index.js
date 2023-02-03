@@ -13,6 +13,8 @@ import ExtraServices from './ExtraServices';
 import SuppliersByRegion from './SuppliersByRegion';
 import SideFilter from './SideFilter';
 import ListViewProducts from './ListViewProducts';
+import ListView from './ListView';
+import GridView from './GridView';
 
 export {
 	Navbar,
@@ -30,4 +32,6 @@ export {
 	SuppliersByRegion,
 	SideFilter,
 	ListViewProducts,
+	ListView,
+	GridView,
 };
