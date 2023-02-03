@@ -12,6 +12,7 @@ import {
 	Select,
 } from '@mui/material';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function CategoryHolder() {
 	const [country, setCountry] = useState('');
@@ -46,14 +47,19 @@ function CategoryHolder() {
 						className='mr-1 cursor-pointer'
 						fontSize='large'
 					/>
-					<p className='mr-5'>All category</p>
+					<Link to='/product' className='mr-5'>
+						All category
+					</Link>
 
 					<div className='flex items-center justify-center lg:justify-start flex-wrap  gap-[26px] mt-[20px] sm:mt-0 '>
 						{firstFiveCategories.map((item, index) => {
 							return (
-								<p key={index} className=''>
+								<Link
+									to={`/product/${item}`}
+									key={index}
+									className=''>
 									{item}
-								</p>
+								</Link>
 							);
 						})}
 					</div>

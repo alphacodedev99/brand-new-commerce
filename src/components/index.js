@@ -11,7 +11,8 @@ import Recommend from './Recommend';
 import RecommendCard from './RecommendCard';
 import ExtraServices from './ExtraServices';
 import SuppliersByRegion from './SuppliersByRegion';
-
+import SideFilter from './SideFilter';
+import ListViewProducts from './ListViewProducts';
 
 export {
 	Navbar,
@@ -27,5 +28,6 @@ export {
 	RecommendCard,
 	ExtraServices,
 	SuppliersByRegion,
-
+	SideFilter,
+	ListViewProducts,
 };
