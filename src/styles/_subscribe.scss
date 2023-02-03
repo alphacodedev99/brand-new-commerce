@@ -1,57 +1,70 @@
 .subscribe {
     background-color: rgb(223, 238, 247);
     height: 190px;
-    margin: 200px 0;
+    margin: 50px 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     h2 {
-        font-family: 'Inter';
+        font-family: "Inter";
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
         line-height: 28px;
-        /* identical to box height, or 140% */
-
         text-align: center;
         letter-spacing: -0.2px;
-
-        /* base-color/dark */
-
-        color: #1C1C1C;
+        color: #1c1c1c;
     }
 
     p {
-        font-family: 'Inter';
+        font-family: "Inter";
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 40px;
-        /* identical to box height, or 150% */
-
         text-align: center;
         letter-spacing: -0.2px;
-
-        /* base-color/gray-800 */
-
         color: #606060;
     }
 
-    input {
-        height: 20px;
-        margin-right: 10px;
-        padding: 26px;
+    .form-container {
+        display: flex;
+    }
+
+    .input-wrapper {
+        position: relative;
+
+        svg {
+            height: 1.7rem;
+            width: 1.7rem;
+            color: #8b96a5;
+
+            padding: 4px;
+            position: absolute;
+            box-sizing: border-box;
+            top: 50%;
+            left: 2px;
+            transform: translateY(-50%);
+        }
+
+        input {
+            height: 50px;
+            box-sizing: border-box;
+            padding-left: 2rem;
+            border-radius: 6px;
+        }
     }
 
     button {
-        // height: 20px;
+        margin-left: 10px;
         padding: 16px;
-        background: linear-gradient(180deg, #127FFF 0%, #0067FF 100%);
+        background: linear-gradient(180deg, #127fff 0%, #0067ff 100%);
         border-radius: 6px;
         color: white;
-         font-family: 'Inter';
+        font-family: "Inter";
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
