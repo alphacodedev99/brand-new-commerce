@@ -1,9 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import {Link} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import ReactPaginate from 'react-paginate';
 import {Rating} from "@mui/material";
 import StarIcon from '@mui/icons-material/Star';
 function ListView({ activeView, allProduct }) {
+	let category = useParams()
+
+	let filteredProducts = allProduct.filter((el)=> el.category === category.category)
+
 	// setup for pagination
 	const [currentItems, setCurrentItems] = useState([]);
 	const [pageCount, setPageCount] = useState(0);
@@ -11,10 +15,18 @@ function ListView({ activeView, allProduct }) {
 	const itemsPerPage = 6;
 
 	useEffect(() => {
-		const endOffset = itemOffset + itemsPerPage;
-		setCurrentItems(allProduct.slice(itemOffset, endOffset));
-		setPageCount(Math.ceil(allProduct.length / itemsPerPage))
-	}, [itemOffset,itemsPerPage,allProduct]);
+		if(filteredProducts.length === 0){
+			const endOffset = itemOffset + itemsPerPage;
+			setCurrentItems(allProduct.slice(itemOffset, endOffset));
+			setPageCount(Math.ceil(allProduct.length / itemsPerPage))
+		}else{
+			setItemOffset(0);
+			const endOffset = itemOffset + itemsPerPage;
+			setCurrentItems(filteredProducts.slice(itemOffset, endOffset));
+			setPageCount(Math.ceil(filteredProducts.length / itemsPerPage))
+		}
+
+	}, [itemOffset,itemsPerPage,allProduct,category.category]);
 
 	const handlePageClick = (event) => {
 		const newOffset = (event.selected * itemsPerPage) % allProduct.length;

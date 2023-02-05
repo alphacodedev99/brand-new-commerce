@@ -12,7 +12,7 @@ import {
 	Select,
 } from '@mui/material';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 
 function CategoryHolder() {
 	const [country, setCountry] = useState('');
@@ -21,7 +21,8 @@ function CategoryHolder() {
 	const dispatch = useDispatch();
 	// get item from redux
 	const { category } = useSelector((state) => state.getCategory);
-
+	let currentCategory = useParams();
+	console.log(currentCategory)
 	useEffect(() => {
 		fetchCategory().then((data) => dispatch(getAllCategory(data)));
 	}, []);
@@ -47,7 +48,7 @@ function CategoryHolder() {
 						className='mr-1 cursor-pointer'
 						fontSize='large'
 					/>
-					<Link to='/product' className='mr-5'>
+					<Link to='/product' className={`${!currentCategory.category ? 'bg-[#DEE2E7] p-[10px] mr-5' : 'mr-5 p-[10px]'}`}>
 						All category
 					</Link>
 
@@ -57,7 +58,7 @@ function CategoryHolder() {
 								<Link
 									to={`/product/${item}`}
 									key={index}
-									className=''>
+									className={`${currentCategory.category === item ? 'bg-[#DEE2E7] p-[10px]' : 'p-[10px]'}`}>
 									{item}
 								</Link>
 							);
