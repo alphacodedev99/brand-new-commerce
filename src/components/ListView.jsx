@@ -68,7 +68,7 @@ function ListView({ activeView, allProduct }) {
 							</div>
 
 							<p className="text-[#505050] text-lg">{activeView === 'listView' ? item.description : item.category }</p>
-							{activeView === 'listView' ? <Link to='/' className="text-[#0D6EFD]">View details</Link> : null}
+							{activeView === 'listView' ? <Link to={`/detail/${item.id}`} className="text-[#0D6EFD]">View details</Link> : null}
 						</div>
 					</div>
 				)
@@ -79,7 +79,7 @@ function ListView({ activeView, allProduct }) {
 			<ReactPaginate
 				className="flex gap-2 items-center justify-center mt-5"
 				pageClassName="bg-[#fff] border border-[#ddd] p-3 flex items-center justify-center"
-				activeClassName="bg-[#DEE2E7]"
+				activeClassName="bg-[#e5e5e5]"
 				previousClassName="bg-[#fff] border border-[#ddd] p-3"
 				nextClassName="bg-[#fff] border border-[#ddd] p-3"
 				breakLabel="..."

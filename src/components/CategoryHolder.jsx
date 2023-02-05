@@ -17,12 +17,12 @@ import {Link, useParams} from 'react-router-dom';
 function CategoryHolder() {
 	const [country, setCountry] = useState('');
 	const [ship, setShip] = useState('');
-	// send data to redux-toolkit
+	// send data to redux-toolkit1
 	const dispatch = useDispatch();
 	// get item from redux
 	const { category } = useSelector((state) => state.getCategory);
 	let currentCategory = useParams();
-	console.log(currentCategory)
+
 	useEffect(() => {
 		fetchCategory().then((data) => dispatch(getAllCategory(data)));
 	}, []);

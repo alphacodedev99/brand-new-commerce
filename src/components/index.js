@@ -15,6 +15,7 @@ import SideFilter from './SideFilter';
 import ListViewProducts from './ListViewProducts';
 import ListView from './ListView';
 import GridView from './GridView';
+import DetailSingle from "./DetailSingle";
 
 export {
 	Navbar,
@@ -34,4 +35,5 @@ export {
 	ListViewProducts,
 	ListView,
 	GridView,
+	DetailSingle
 };
