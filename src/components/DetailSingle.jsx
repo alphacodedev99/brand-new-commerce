@@ -1,14 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import {AiOutlineCheck} from 'react-icons/ai'
 import {BsBagCheck} from 'react-icons/bs'
+import {CgProfile} from 'react-icons/cg'
+import {FiFlag} from 'react-icons/fi'
 import StarIcon from "@mui/icons-material/Star";
 import {Rating} from "@mui/material";
 function DetailSingle({currentProduct}) {
     console.log(currentProduct)
     const [currentImage,setCurrentImage] = useState(0);
 
-    return <div className="lg:min-h-[580px] border border-[#dee2e7] bg-white rounded-xl p-[20px] mt-[20px] flex gap-5">
-           <div className="w-[30%]">
+    return <div className="h-full flex-col lg:flex-row items-center md:items-start lg:min-h-[580px] border border-[#dee2e7] bg-white rounded-xl p-[20px] mt-[20px] flex gap-5 w-full justify-between">
+           <div className="w-full lg:w-[30%]">
               {currentProduct && <img src={currentProduct.images[currentImage]} alt="radi" className="min-w-full h-[300px] object-contain"/> }
              <div className="flex items-center mt-[20px] gap-2">
              {currentProduct?.images.map((el,index)=> {
@@ -17,7 +19,7 @@ function DetailSingle({currentProduct}) {
              </div>
            </div>
     {/*text section*/}
-        <div className="w-[40%]">
+        <div className="w-full lg:w-[40%]">
           {currentProduct?.stock ? <p className="flex items-center gap-2 text-[#00B517]"><AiOutlineCheck/> In stock</p> : null}
             <h3 className="text-[18px] font-bold">{currentProduct?.title}</h3>
             <div className="flex items-center gap-3  my-2">
@@ -52,6 +54,24 @@ function DetailSingle({currentProduct}) {
                 <hr/>
                 <p className="text-[#8B96A5] font-[300]">Type: Classic {currentProduct?.title}</p>
                 <p className="text-[#8B96A5] font-[300]">Design: Modern {currentProduct?.brand}</p>
+            </div>
+        </div>
+
+    {/*    user section*/}
+        <div className="border border-[#ddd] rounded-xl p-5">
+           <div className="flex items-center gap-4 mb-5">
+               <CgProfile className="text-6xl"/>
+               <div className="flex flex-col ">
+                   <p>Supplier</p>
+                   <p>Guanjoi Tradimng LLC</p>
+               </div>
+           </div>
+            <hr/>
+            <div className="mt-5">
+                <div className="flex items-center text-lg gap-2">
+                    <FiFlag/>
+                    <span className="text-[#333] ">Serbia</span>
+                </div>
             </div>
         </div>
 
