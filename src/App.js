@@ -9,6 +9,7 @@ import {
 	Subscribe,
 	CategoryHolder,
 } from './components';
+import { restoreCart } from './store/sliceCart';
 import { getAllProduct } from './store/sliceProduct';
 import { fetchAllProduct } from './utils/fetchAllProduct';
 // redux
@@ -19,6 +20,8 @@ function App() {
 		fetchAllProduct().then((data) =>
 			dispatch(getAllProduct(data.products))
 		);
+
+		dispatch(restoreCart());
 	}, []);
 
 	return (
