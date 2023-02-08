@@ -13,7 +13,7 @@ import { useSelector } from 'react-redux';
 
 function Navbar() {
 	const { category } = useSelector((state) => state.getCategory);
-
+	const { cart } = useSelector((state) => state.storeProduct);
 	return (
 		<div className='w-full h-full lg:h-[86px] bg-white'>
 			<div className='container flex flex-wrap items-center justify-center h-full gap-3 py-5 mx-auto lg:justify-between lg:gap-0'>
@@ -83,7 +83,9 @@ function Navbar() {
 							Orders
 						</span>
 					</Link>
-					<Link to='/cart' className='flex flex-col items-center'>
+					<Link
+						to='/cart'
+						className='relative flex flex-col items-center'>
 						<ShoppingCartIcon
 							className='text-[#979797]'
 							fontSize='large'
@@ -91,6 +93,9 @@ function Navbar() {
 						<span className='text-[#979797] font-light text-[12px]'>
 							My Cart
 						</span>
+						<p className='flex items-start justify-center absolute top-[-10px] right-0 bg-[#1281ffc9] rounded-full px-2 text-white'>
+							{cart.length}
+						</p>
 					</Link>
 				</div>
 			</div>

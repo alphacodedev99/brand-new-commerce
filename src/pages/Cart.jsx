@@ -15,5 +15,6 @@ function Cart() {
 		</div>
 	);
 }
+// TODO: Cart number for products
 
 export default Cart;
