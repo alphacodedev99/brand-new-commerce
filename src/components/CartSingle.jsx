@@ -1,7 +1,6 @@
 import React from 'react';
 
-function CartSingle({ products }) {
-	console.log(products);
+function CartSingle({ products, cartValue }) {
 	return (
 		<div className='flex items-center justify-between gap-3'>
 			<div className='flex items-center gap-3'>
